@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="elements/HHH.jpg">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>More Info</title>
+
+    <style>
+       /**********************************************FOR HEADER*************************************************/
+       body, html {
+            margin: 0;
+           padding: 0;
+           display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        
+        header {
+            background-color: rgba(51, 51, 51, 0.522); /* BACKGROUND HEADER COLOR */
+            height: 190px;/* SIZE FOR BACKGROUND HEADER*/
+            color: rgba(255, 255, 255, 0.788); /* TEXT COLOR FOR THE MINUE BUTTONS */
+            border-bottom: 2px solid rgba(51, 51, 51, 0.522); /* DIVISION LINE BELOW THE HEADR */
+            display: flex;
+            flex-direction: column; /*DIRECTION FOR THE MENU BUTTON    its column so that the image is on top*/
+            /*(justify-content: space-between;)) /* Align content and navigation to the ends, but i guess this is not important*/
+            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
+            padding: 20px;
+        }
+            
+        .top-section {
+         display: flex;
+         align-items: center; /*for the elements on the top,. for alignment*/
+         /***(padding: 20px;)  this is optional, and mas better if its dont have padding */
+        }
+
+        img {
+            max-width: 100px; /* Adjust the size of your image */
+            border-radius: 50%; /* Rounded image, adjust as needed */
+            margin-right: 20px; /* Spacing between the image and details */
+        }
+
+        .details {
+            flex-grow: 1;
+        }
+
+       /* STYL FOR NAVIGATION MENU */
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            margin: -10;
+            background-color: #33333300;
+           
+        }
+
+        nav li {
+            display: inline;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+
+
+        /**********************************************DROPDOWN MENU*************************************************/
+        /* STYLE THE DROPDOWN CONTAINER */
+        .dropdown {
+            position: relative;
+        }
+
+       /* STYLE DROPDOWN ITEMS */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: -45px;
+            background-color: #33333385;
+            min-width: 160px;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* STYLE THE DROPDOWN ON HOVER */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*this is the first dropdown content css*/
+
+        /* Style the second dropdown container */
+        .Dropdown-container {
+            position: relative;
+        }
+
+        .Dropdown-content {
+            display: none;
+            position: absolute;
+            left: -20px;
+            background-color: #33333385;
+            min-width: 120px;
+            z-index: 1;
+        }
+
+        /* Style second dropdown items */
+        .Dropdown-content li {
+            padding: 10px;
+        }
+
+        /* Style the second dropdown on hover */
+        .Dropdown:hover .Dropdown-content {
+            display: block;
+        }
+
+
+
+        /**************************************************BODY*******************************************************/
+        /*this is for the body, where i can write some notes and information,
+        im using paper container, cause its easy to edit inside the papercontainer*/
+        .paper-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Make the container take up the entire viewport height */
+        }
+        #paper {
+        text-align: center;
+        color: #ffffff;
+        background-color: #33333328;
+        border: 1px solid #33333300;
+        padding: 70px;
+        height: 285px;
+        overflow-y: scroll;
+        }
+        #paper a{
+            color: #ffffff;
+        }
+        /* Customize the scrollbar appearance */
+        #paper::-webkit-scrollbar {
+        width: 1px; /* Set the width of the scrollbar */
+        background: #33333385; /* Color of the scrollbar thumb */
+        }
+
+
+
+        /**********************************************BACKGROUND VIDEO*************************************************/
+      /*this is the style for background, but im using video
+      as my web backgound so that its have live bbackground*/
+       .video-container {
+         position: fixed;
+          top: -400px;
+            left: 0px;
+            width: 4000px;
+            height:auto;
+            overflow: hidden;
+            object-fit: cover;
+         z-index: -1;
+        }
+        .Gold-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1; /* Place the video behind the content */
+        }
+        .Gold-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top; /* Center the video horizontally and align to the top */
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+
+
+        /**********************************************FOOTER*************************************************/
+        /*this is for footer, but i made my footer inside the body content
+        cause the its more efficient to do some style when i made it inside the body content*/
+        .container {
+            flex: 1; /* Allow the content to grow and take up available space */
+        }
+
+        footer {
+            background-color: #ffffff7e;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 0px;
+            font-size: 11px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+ <div class="container">
+    <header>
+        <div class="top-section">
+            <img src="elements/HHH.jpg" alt="HHH">
+            <div class="details">
+                <h1>Jaime Banual Perez Jr.</h1>
+                <p>MORE INFO</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="Dropdown">
+                    <span><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/HOME.html#">Home Page</a></span>
+                    <ul class="Dropdown-content">
+                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/IT111%20BLOG.html">IT11 Blog</a></li>
+                        <li><a href="#">Flex Page</a></li>
+                    </ul>
+                </li>
+                <li class="Dropdown">
+                    <span><a href="#">About</a></span>
+                    <ul class="Dropdown-content">
+                       <li><a href="#">About This Page</5h></a></li>
+                    </ul>
+                </li>
+                <li class="Dropdown">
+                    <span><a href="#">Contact</a></span>
+                    <ul class="Dropdown-content">
+                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/More.html#">More info</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="Gold-container">
+            <video autoplay loop muted playsinline>
+                <source src="elements/GOLD.mp4" type="video/mp4">
+            </video>
+        </div>
+    </header>
+   
+    <div id="paper">
+        <br><br><br>
+            <h1>Contact are given below<br><br><br><br><br><br><br><br><br><br>
+            philippine #+639276609962 </br><br>
+            Gmail: thepersonaljaime@gmail.com</br><br>
+            <a href="https://www.facebook.com/jaime.b.perez.jr">Facebook</a><br><br>
+        <a href="https://www.instagram.com/jaime.b.perezjr/">Instagram</a>
+     </div>
+     
+ </div>
+    <footer>
+        Wepage ni Jaime. v0.1.0.0 Here you can see what i have learned being 1st year student in BSIT
+    </footer>
+
+
+</body>
+
+
+</html>
