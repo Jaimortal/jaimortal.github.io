@@ -153,28 +153,16 @@
         
 
 
-        /**********************************************FOOTER*************************************************/
-        /*this is for footer, but i made my footer inside the body content
-        cause the its more efficient to do some style when i made it inside the body content*/
-        .container {
-            flex: 1; /* Allow the content to grow and take up available space */
-        }
-
-        footer {
-            background-color: #ffffff7e;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 0px;
-            font-size: 11px;
-        }
+      
         
 
 
         /**************************************************************************************/
        
-        .body_container {
+        .selfintro_container {
         text-align: center; /* Center the text within the container */
         position: relative;
+        top: 100px;
         width: 50%; /* Set the width of the container */
         margin: 10; /* Center the container horizontally */
         color: #fff;
@@ -185,8 +173,9 @@
             overflow: hidden;
             margin-left: 0px;
             position: relative;
-            left: 300px;
-            bottom: 500px;
+            left: 280px;
+            bottom: 460px;
+            transform: translateX(3%);
         }
 
         .Shortfilm {
@@ -194,8 +183,87 @@
             height: auto;
         }
 
+        .BODY_container {
+        background-color: #13131333;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 2300px;
+        width: 1400px;
+        top: 1381px;
+        z-index: +1;
+        }
+
        
         /**************************************************************************************/
+        .social-media-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+        }
+
+        .social-media-links a {
+            margin-right: 40px;
+        }
+
+        .social-media-icons img {
+            width: 40px; /* Adjust the size of the icons */
+            height: 40px;
+        }
+
+
+     /**********************************************FOOTER*************************************************/
+        /*this is for footer, but i made my footer inside the body content
+        cause the its more efficient to do some style when i made it inside the body content*/
+        .container {
+            flex: 1; /* Allow the content to grow and take up available space */
+        }
+        
+        footer {
+            background-color: #ffffff33;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            position: absolute;
+            top: 2530px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .footer-logo img {
+            width: 20px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        .footer-credits {
+            text-align: center;
+        }
+
+        .footer-background {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .footer-background img {
+            width: 20px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        .footer-logo {
+            text-align: center;
+        }
+        .footer-links a {
+            color: rgb(255, 196, 0); /* Default link color */
+            text-decoration: none;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
     </style>
     
 
@@ -215,32 +283,13 @@
         <nav>
             <ul>
                 <li class="Dropdown">
-                    <span><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/HOME.html#">Home Page</a></span>
-                    
+                    <span><a href="index.html">Home Page</a></span>
                 </li>
                 <li class="Dropdown">
-                    <span><a href="#">About</a></span>
-                    <ul class="Dropdown-content">
-                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/IT111%20BLOG.html">IT11 Blog</a></li>
-                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/FlexPage.htm">Flex Page</a></li>
-                    </ul>
+                    <span><a href="OTHER TAB/IT111 BLOG.html">IT111Blog</a></span>
                 </li>
                 <li class="Dropdown">
-                    <span><a href="#">Contact</a></span>
-                    <ul class="Dropdown-content">
-                        <a href="https://www.facebook.com/your-facebook-page" target="_blank">
-                            <img src="VIDEOS AND PICTURE/facebook.png" alt="Facebook"> Facebook
-                        </a>
-                        <a href="https://youtube.com/@bikerjaimph8219?si=97KlkAszFOvVdcHK" target="_blank">
-                            <img src="VIDEOS AND PICTURE/youtube.png" alt="YouTube"> YouTube
-                        </a>
-                        <a href="https://www.instagram.com/your-instagram-page" target="_blank">
-                            <img src="VIDEOS AND PICTURE/instagram.png" alt="Instagram"> Instagram
-                        </a>
-                        <a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/More.html">
-                            <img src="VIDEOS AND PICTURE/more.png" alt="More"> More
-                        </a>
-                    </ul>
+                    <span><a href="OTHER TAB/FlexPage.htm">FlexPage</a></span>
                 </li>
             </ul>
         </nav>
@@ -248,47 +297,88 @@
             <video autoplay loop muted playsinline>
                 <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
             </video>
-        </div>
-       
+        </div>    
     </header>
    
-    <div class="body_container">
-        <ul>
-            <br><br><br>
-                Self Introduction
-                </br></br></br>
-                Hi! I'm Jaime B. Perez Jr. and this is my webpage,</br>
-                My Hobbies is playing games, just like a normal guy..</br>
-                my skills is playing guitar, drawing or sketching</br>
-                The sports that i want is downhill using bike</br>
-                I made my happines through thing that can hurt me physicaly</br>
-                discovering the things that can fully aweak my self,</br>
-                is the hardest thing that until now is undiscovered</br></br>
-                The things that i want:</br>
-                I want to expand my knowladge about networking</br>
-                I want to learn more things in terms of vertual trading</br>
-                I want to become more knowladgeable man in terms of hardware</br></br>
-                I will share somthing that un unnecessary, SKIPT FOR IT</br>
-                Sometimes in life there's always be a challenges but in</br>
-                every challenges there's also a way to get out with it</br>
-                But from the word "way" its singular, so the only way is</br>
-                one way, evertime you want to escape with that challenges</br>
-                you can't, it will make even worst, and you think that</br>
-                it is still a challenges,. but its not. cause the way</br>
-                is already in front of you, but you dont take an action!</br>
-                so now if you have challenges, go through. and dont make a way!</br>
-                GOD Said, all challenges is a trials for us to make us</br>
-                more stronger. James 1:2-4(NIV)</br></br>
-        </ul>
-            <div class="short-film_container">
-                <video class="Shortfilm"controls>
-                    <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
-                </video>
-        </div>
-   </div>
-
+    <div class="BODY_container">
+        <div class="selfintro_container">
+            <ul>
+                <br><br><br>
+                    Self Introduction
+                    </br></br></br>
+                    Hi! I'm Jaime B. Perez Jr. and this is my webpage,</br>
+                    My Hobbies is playing games, just like a normal guy..</br>
+                    my skills is playing guitar, drawing or sketching</br>
+                    The sports that i want is downhill using bike</br>
+                    I made my happines through thing that can hurt me physicaly</br>
+                    discovering the things that can fully aweak my self,</br>
+                    is the hardest thing that until now is undiscovered</br></br>
+                    The things that i want:</br>
+                    I want to expand my knowladge about networking</br>
+                    I want to learn more things in terms of vertual trading</br>
+                    I want to become more knowladgeable man in terms of hardware</br></br>
+                    I will share somthing that un unnecessary, SKIPT FOR IT</br>
+                    Sometimes in life there's always be a challenges but in</br>
+                    every challenges there's also a way to get out with it</br>
+                    But from the word "way" its singular, so the only way is</br>
+                    one way, evertime you want to escape with that challenges</br>
+                    you can't, it will make even worst, and you think that</br>
+                    it is still a challenges,. but its not. cause the way</br>
+                    is already in front of you, but you dont take an action!</br>
+                    so now if you have challenges, go through. and dont make a way!</br>
+                    GOD Said, all challenges is a trials for us to make us</br>
+                    more stronger. James 1:2-4(NIV)</br></br>
+            </ul>
+                <div class="short-film_container">
+                    <video class="Shortfilm"controls>
+                        <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
+                    </video>
+            </div>
+       </div>
+       <div class="social-media-links">
+        <a href="https://www.facebook.com/jaime.b.perez.jr" target="_blank" title="Facebook">
+            <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook">
+        </a>
+        <a href="https://youtube.com/@bikerjaimph8219?si=HuSmPYncYSuycjzb" target="_blank" title="YouTube">
+            <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube">
+        </a>
+        <a href="https://www.tiktok.com/@jaimeperezr1?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok">
+            <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
+        </a>
+    </div>
+    </div>
     <footer>
-        Wepage ni Jaime. v0.1.0.0 Here you can see what i have learned being 1st year student in BSIT
+        <div class="footer-credits footer-column">
+            Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT
+        </div>
+    </br>
+        <div class="footer-background footer-column">
+            Cridets to the Background video owner
+            <div class="footer-links">
+            <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
+                <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
+                Background Video
+            </div>
+            </a>
+        </div>
+    </br>
+        <div class="footer-logo footer-column">
+            Cridits to the Logo owner</br>
+            <div class="footer-links">
+                <a href="https://www.flaticon.com/free-icon/facebook_3670124?term=facebook&page=1&position=18&origin=search&related_id=3670124" target="_blank">
+                    <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook Logo">
+                    Facebook
+                </a>
+                <a href="https://www.flaticon.com/free-icon/youtube_3670209?term=youtube&page=1&position=17&origin=search&related_id=3670209" target="_blank">
+                    <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube Logo">
+                    YouTube
+                </a>
+                <a href="https://www.flaticon.com/search?word=tiktok" target="_blank">
+                    <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok Logo">
+                    TikTok
+                </a>
+            </div>
+        </div>
     </footer>
 
     <!--*************************************************************************************-->
@@ -298,4 +388,4 @@
 </body>
 
 
-</html>
+</html> 
