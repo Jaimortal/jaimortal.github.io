@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="VIDEOS AND PICTURE/HHH.jpg">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>IT111 Blog</title>
+
+        <style>
+        /**********************************************FOR HEADER*************************************************/
+        body {
+            margin: 0;
+            padding: 0;
+            }
+        
+        body, html {
+                margin: 0;
+            padding: 0;
+            display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            
+            header {
+                background-color: rgba(19, 19, 19, 0.829); /* BACKGROUND HEADER COLOR */
+                width: 100%;
+                height: 190px;/* SIZE FOR BACKGROUND HEADER*/
+                color: rgba(255, 255, 255, 0.788); /* TEXT COLOR FOR THE MINUE BUTTONS */
+                border-bottom: 2px solid rgba(19, 19, 19, 0.829); /* DIVISION LINE BELOW THE HEADR */
+                display: flex;
+                flex-direction: column; /*DIRECTION FOR THE MENU BUTTON    its column so that the image is on top*/
+                /*(justify-content: space-between;)) /* Align content and navigation to the ends, but i guess this is not important*/
+                align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
+                padding: 20px;
+                overflow: hidden;
+            }
+                
+            .top-section {
+            display: flex;
+            align-items: center; /*for the elements on the top,. for alignment*/
+            /***(padding: 20px;)  this is optional, and mas better if its dont have padding */
+            }
+
+            .top-section img{
+                max-width: 100px; /* Adjust the size of your image */
+                border-radius: 50%; /* Rounded image, adjust as needed */
+                margin-right: 20px; /* Spacing between the image and details */
+            }
+
+            .details {
+                flex-grow: 1;
+            }
+
+        /* STYL FOR NAVIGATION MENU */
+            nav ul {
+                list-style: none;
+                padding: 10px;
+                margin: -10;
+                background-color: #33333300;
+            
+            }
+
+            nav li {
+                display: inline;
+                position: relative;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                padding: 10px 20px;
+                display: inline-block;
+            }
+
+
+
+            /**********************************************DROPDOWN MENU*************************************************/
+            /* STYLE THE DROPDOWN CONTAINER */
+            .dropdown {
+                position: relative;
+            }
+
+        /* STYLE DROPDOWN ITEMS */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                left: -45px;
+                background-color: #33333385;
+                min-width: 160px;
+                padding: 10px;
+                z-index: 1;
+            }
+
+            /* STYLE THE DROPDOWN ON HOVER */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            /*this is the first dropdown content css*/
+
+            /* Style the second dropdown container */
+            .Dropdown-container {
+                position: relative;
+            }
+
+            .Dropdown-content {
+                display: none;
+                position: absolute;
+                left: -20px;
+                background-color: #33333385;
+                min-width: 120px;
+                z-index: 1;
+            }
+
+            /* Style second dropdown items */
+            .Dropdown-content li {
+                padding: 10px;
+            }
+
+            /* Style the second dropdown on hover */
+            .Dropdown:hover .Dropdown-content {
+                display: block;
+            }
+
+
+
+            /**********************************************BACKGROUND VIDEO*************************************************/
+        /*this is the style for background, but im using video
+        as my web backgound so that its have live bbackground*/
+        .video-container {
+            position: fixed;
+            top: -400px;
+                left: 0px;
+                width: 4000px;
+                height:auto;
+                overflow: hidden;
+                object-fit: cover;
+            z-index: -1;
+            filter: blur(10px);
+            }
+
+            .Gold-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Place the video behind the content */
+            }
+            .Gold-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top; /* Center the video horizontally and align to the top */
+            position: absolute;
+            top: 0;
+            left: 0;
+            }
+            
+            /**********************************************BODY CONTENT*************************************************/
+            .BODY_container {
+            margin: 0;
+            padding: 0;
+            background-color: #00000033;
+            height: 2300px;
+            width: 1340px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 1381px;
+            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
+            z-index: 1;
+            }
+
+            .selfintro_container{
+                font-family: "Arial", sans-serif ;
+                font-size: 13.5;
+            }
+            .selfintro_container {
+            text-align: center; /* Center the text within the container */
+            position: relative;
+            left: 300px;
+            width: 50%; /* Set the width of the container */
+            margin: 10; /* Center the container horizontally */
+            top: 100px;
+            color: #fff;
+            }
+
+            .Photosample_container {
+            display: block;
+            position: relative;
+            left: 30%;
+            border-radius: 8px; /* Add border-radius for rounded corners if desired */
+            overflow: hidden; /* Ensure that the border doesn't extend beyond the photo */
+            width: 500px; /* Set a fixed width for the box */
+            }
+
+            .Photosample_container img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain the aspect ratio */
+            display: block; /* Remove any default spacing or borders around the image */
+            }
+
+            
+            .Book_container {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                z-index: 1;
+            }
+
+            .Book_container a {
+                margin-right: 40px;
+                z-index: 1;
+            }
+
+            .Book_container img {
+                width: 200px; /* Adjust the size of the icons */
+                height: auto;
+                position: absolute;
+                top: 200px;
+                right: 210px;
+
+            }
+
+            /**********************************************FOOTER*************************************************/
+            /*this is for footer, but i made my footer inside the body content
+            cause the its more efficient to do some style when i made it inside the body content*/
+            .container {
+                flex: 1; /* Allow the content to grow and take up available space */
+            }
+            
+            footer {
+                background-color: rgb(24, 24, 24);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 10px;
+                font-size: 13px;
+                font-family: "inherit", sans-serif;
+                position: absolute;
+                top: 2530px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .footer-column {
+                flex: 1;
+            }
+
+            .footer-logo img {
+                width: 20px; /* Adjust the size of the logo */
+                height: auto;
+            }
+
+            .footer-credits {
+                text-align: center;
+            }
+
+            .footer-background {
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+            .footer-background img {
+                width: 20px; /* Adjust the size of the logo */
+                height: auto;
+            }
+
+            .footer-logo {
+                text-align: center;
+            }
+            .footer-links a {
+                color: rgb(255, 196, 0); /* Default link color */
+                text-decoration: none;
+                margin-right: 20px;
+                margin-bottom: 5px;
+            }
+
+            /**************************************************************************************/
+            .Photosample_container {
+            display: block;
+            position: absolute;
+            top: 430px;
+            left: 700px;
+            border-radius: 8px; /* Add border-radius for rounded corners if desired */
+            overflow: hidden; /* Ensure that the border doesn't extend beyond the photo */
+            width: 500px; /* Set a fixed width for the box */
+            }
+
+            .Photosample_container img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain the aspect ratio */
+            display: block; /* Remove any default spacing or borders around the image */
+            }
+
+            img.Photosample_image {
+            display: block;
+            }
+            /**************************************************************************************/
+
+            /***************************************SCROLL PROGRESS BAR***********************************************/
+            #progress-bar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: #f2f2f2;
+                z-index: 5;
+            }
+            
+            #progress-bar-fill {
+                height: 100%;
+                background-color: rgba(194, 158, 42, 0.911);
+                width: 0;
+                transition: width 0.3s;
+            }
+            /**************************************************************************************/
+
+            .HTMLessay_container{
+            margin-top: 60px;
+            font-family: Arial, sans-serif;
+            text-align: justify; /* Set text alignment to justify */
+            line-height: 1.6; /* Adjust line height for better readability */
+            margin: 20px;
+            }
+
+        </style>
+        
+
+
+    </head>
+
+    <body>
+    
+        <header>
+            <div class="top-section">
+                <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
+                <div class="details">
+                    <h1>Jaime Banual Perez Jr.</h1>
+                    <p>IT111 BLOG ENTRIES PAGE</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="Dropdown">
+                        <span><a href="index.html">Home Page</a></span>
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="IT111 BLOG.html">IT111 Blog</a></span>
+                        
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="FlexPage.htm">Flex Page</a></span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="Gold-container">
+                <video autoplay loop muted playsinline>
+                    <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
+                </video>
+            </div>
+        </header>
+        <div id="progress-bar">
+            <div id="progress-bar-fill"></div>
+        </div>
+        <script>
+            window.addEventListener('scroll', function() {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollProgress = (scrollTop / scrollHeight) * 100;
+                document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
+            });
+        </script>
+        <div class="BODY_container">
+            <div class="selfintro_container">
+                <ul>
+                    <br><br><br>
+                        This are the Thing that i Learned  in this Subject.
+                    </br></br></br>
+                    I learned the besic concenpt of computer security and the basic type of cybercrimes, </br>
+                    one of this is the theft, its a common cybercrimes, one of the exmple of this is the illegal</br>
+                    downloading like downloading movies from the illegal websites,
+                </br></br></br></br></br></br></br></br></br></br>
+                    <div class="Book_container">
+                        <a href="https://drive.google.com/file/d/1eELnb2G9XKLRgFEY2GaNW6_P24aa38gC/view?usp=drive_link" target="_blank" title="Case Study">
+                            <img src="VIDEOS AND PICTURE/CaseStudy.jpg" alt="Case Study">
+                        </a>
+                    </div></br></br></br></br></br></br></br></br></br>
+                    I also have my cyber group activity which is the case study for the most famous</br> 
+                    cybercrimes in the history of cyber wolrd</br></br></br></br></br></br>
+
+                    I also learned the time line of computer technology, we have</br></br>
+                    MECHANICAL ERA (1642- 1934)</br>
+                    VACUUM TUBES ERA (1935-1946)</br>
+                    TRANSISTORS ERA (1947-1962)</br>
+                    INTEGRATED CIRCUITERA (1963-1972)</br>
+                    PC & VLSI ERA (1972-PRESENT)</br>
+        <div class="HTMLessay_container">
+                    </br></br></br></br>
+                    One of the coolest lessons on my learning adventure has been Lesson 6, where we 
+                    explored the magic of HTML and CSS. It's like the superhero team of web design,
+                    making web pages look awesome and easy to create.</br></br>
+
+                    HTML is like the backbone of a webpage it organizes the content, making sure 
+                    everything is in the right place. It's like putting together puzzle pieces to tell your 
+                    computer how your webpage should look. Then comes CSS, the stylish friend that adds 
+                    colors, fonts, and makes everything visually stunning.</br></br>
+
+                    What makes this lesson super cool is how easy it is to use. It's like having a creative 
+                    playground where you can build your own digital world. HTML is like playing within 
+                    building blocks, creating the structure of your webpage. CSS then adds the cool colors
+                    and styles, making your creation stand out.</br></br>
+                    
+                    Learning HTML felt like learning the language of the web. It's how you tell your 
+                    computer what each part of your webpage is headings, paragraphs, images, you name
+                    it. CSS is where you get to be the designer, deciding how big your headings should be, 
+                    what colors to use, and how everything should look.</br></br>
+
+                    Looking back, Lesson 6 wasn't just a lesson; it was an adventure into the fun side of web 
+                    development. It took something that seemed complex and made it exciting. HTML and 
+                    CSS became more than just coding languages they became my tools for expressing 
+                    creativity online. It's like turning a blank canvas into a masterpiece, and that's pretty
+                    amazing!</br></br></br></br></br>
+
+
+                    In my computer class, I learned about turning things into useful stuff. Imagine you have 
+                    some facts (we call it data), and you can change it into helpful things we call 
+                    information.</br></br>
+
+                    I also found out that computers have four important parts: the things you can touch 
+                    (that's hardware), the programs that make them work (that's software), the people 
+                    use them (that's us!), and the important facts they use (that's data).</br></br>
+
+                    These parts work together like a team. The things you can touch help the computer, the 
+                    programs make it do cool stuff, people use it, and important facts make everything 
+                    make sense. Learning about all this computer stuff has been like discovering a new kind 
+                    knowledge.</br></br></br>
+                   </div>      
+                        <div class="OutroStatement_container">
+                            I really learned alot in this subject, from their history to the modern reality,
+                            I gain alot of knowledge from this subject and I'm hopeful that this subject 
+                            keeps growing and improving in the future. Cheers to more learning ahead!
+                            thank you!
+                    </div>  
+                </ul>
+            </div>
+        </div>
+        
+
+
+        <footer>
+            <div class="footer-credits footer-column">
+                Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT</br>
+            if you have concerned email me. thepersonaljaime@gmail.com</br></br>
+            </div>
+        </br>
+            <div class="footer-background footer-column">
+                Cridets to the Background video owner
+                <div class="footer-links">
+                <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
+                    <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
+                    Background Video
+                </div>
+            </a>
+            </div>
+        </br>
+            <div class="footer-logo footer-column">
+                Cridits to the Logo owner</br>
+                <div class="footer-links">
+                    <a href="https://www.flaticon.com/free-icon/facebook_3670124?term=facebook&page=1&position=18&origin=search&related_id=3670124" target="_blank">
+                        <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook Logo">
+                        Facebook
+                    </a>
+                    <a href="https://www.flaticon.com/free-icon/youtube_3670209?term=youtube&page=1&position=17&origin=search&related_id=3670209" target="_blank">
+                        <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube Logo">
+                        YouTube
+                    </a>
+                    <a href="https://www.flaticon.com/search?word=tiktok" target="_blank">
+                        <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok Logo">
+                        TikTok
+                </a>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

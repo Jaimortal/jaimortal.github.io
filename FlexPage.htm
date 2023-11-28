@@ -3,25 +3,27 @@
 <head>
     <link rel="icon" href="VIDEOS AND PICTURE/HHH.jpg">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>HOME</title>
+    <title>Flex Page</title>
 
     <style>
        /**********************************************FOR HEADER*************************************************/
        body {
-            margin: 0;
-            padding: 0;
+        margin: 0;
+        padding: 0;
         }
-
+       
        body, html {
             margin: 0;
-            padding: 0;
-            display: flex;
+           padding: 0;
+           display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         
         header {
+            margin: 0;
+            padding: 0;
             background-color: rgba(19, 19, 19, 0.829); /* BACKGROUND HEADER COLOR */
             width: 100%;
             height: 190px;/* SIZE FOR BACKGROUND HEADER*/
@@ -41,7 +43,7 @@
          /***(padding: 20px;)  this is optional, and mas better if its dont have padding */
         }
 
-        img {
+        .top-section img{
             max-width: 100px; /* Adjust the size of your image */
             border-radius: 50%; /* Rounded image, adjust as needed */
             margin-right: 20px; /* Spacing between the image and details */
@@ -85,7 +87,7 @@
             display: none;
             position: absolute;
             left: -45px;
-            background-color: #333333;
+            background-color: #33333385;
             min-width: 160px;
             padding: 10px;
             z-index: 1;
@@ -106,7 +108,7 @@
             display: none;
             position: absolute;
             left: -20px;
-            background-color: #0f0f0f;
+            background-color: #33333385;
             min-width: 120px;
             z-index: 1;
         }
@@ -123,8 +125,6 @@
 
 
 
-
-
         /**********************************************BACKGROUND VIDEO*************************************************/
       /*this is the style for background, but im using video
       as my web backgound so that its have live bbackground*/
@@ -137,7 +137,9 @@
             overflow: hidden;
             object-fit: cover;
          z-index: -1;
+         filter: blur(10px);
         }
+
         .Gold-container {
         position: fixed;
         top: 0;
@@ -157,91 +159,49 @@
         left: 0;
         }
         
-
-
-      
-        
-
-
-       
-       /*****************************************************BODY**********************************************************/
-       .selfintro_container{
-        font-family: "Arial", sans-serif ;
-        font-size: 13.5;
+        /**********************************************BODY CONTENT*************************************************/
+        .main_content_container {
+        margin: 0;
+        padding: 0;
+        background-color: #00000033;
+        height: 2300px;
+        width: 1340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 1381px;
+        z-index: 1;
         }
+
         .selfintro_container {
-            text-align: center; /* Center the text within the container */
-            position: relative;
-            left: 300px;
-            width: 50%; /* Set the width of the container */
-            margin: 10; /* Center the container horizontally */
-            top: 100px;
-            color: #fff;
-        }
-        .selfintro_container{
-            font-family: Arial, sans-serif;/*Set a fontstyle*/
-            text-align: justify; /* Set text alignment to justifyy */
-            line-height: 1.6; /* adjust line height for better readability */
-            margin: 20px;/*margin*/
-            }
-
-        .short-film_container {
-            width: 190%; /* Adjust the width of the film container as needed */
-            overflow: hidden; /*hide the overflow*/
-            margin-left: 0px; /*Set Margin*/
-            position: relative;/*Set position to relative*/
-            top: 150px;
-            left: 100px;/*Clearance for left side*/
-            bottom: 0px;/*Clearance for bottom side*/
-            transform: translateX(3%);/*Tranxlatex*/
+        text-align: center; /* Center the text within the container */
+        position: relative;
+        top: 100px;
+        
+        color: #fff;
         }
 
-        .Shortfilm {
-            width: 40%;/*Set the width of the video*/
-            height: auto;/*Automaticly set the heigth for better*/
+        .Photosample_container {
+        display: block;
+        position: relative;
+        left: 30%;
+        border-radius: 8px; /* Add border-radius for rounded corners if desired */
+        overflow: hidden; /* Ensure that the border doesn't extend beyond the photo */
+        width: 500px; /* Set a fixed width for the box */
         }
 
-        .BODY_container {
-            justify-content: center;
-            margin: 0;/*reset margin to 0*/
-            padding: 0;/*reset padding to 0*/
-            background-color: #00000033;/*Set color for background*/
-            height: 2300px;/*Set height*/
-            width: 1340px;/*set width*/
-            position: absolute;/*Set Position absulot*/
-            top: 50%;/*Clreance for top*/
-            left: 50%;/*Clearance for left*/
-            transform: translate(-50%, -50%);
-            top: 1381px;
-            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
-            z-index: 1;
+        .Photosample_container img {
+        width: 100%; /* Make the image fill the container */
+        height: auto; /* Maintain the aspect ratio */
+        display: block; /* Remove any default spacing or borders around the image */
         }
 
-       
-        /*******************************************SOCIALMEDIA*******************************************************/
-        .social-media-links {
-            position: inherit;
-            right: 700px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            z-index: 1;/*Bring to front*/
+        img.Photosample_image {
+        display: block;
         }
 
-        .social-media-links a {
-            margin-top: 40px;
-            margin-right: 50px;
-            z-index: 1;/*Bring to front*/
-        }
-
-        .social-media-icons img {
-            width: 40px; /* Adjust the size of the icons */
-            height: 40px;
-            z-index: 1;/*Bring to front*/
-        }
-
-
-     /**********************************************FOOTER*************************************************/
+        /**********************************************FOOTER*************************************************/
             /*this is for footer, but i made my footer inside the body content
             cause the its more efficient to do some style when i made it inside the body content*/
             .container {
@@ -267,24 +227,24 @@
 
             .footer-logo img {
                 width: 20px; /* Adjust the size of the logo */
-                height: auto;/*Auto size*/
+                height: auto;
             }
 
             .footer-credits {
-                text-align: center;/*Align center*/
+                text-align: center;
             }
 
             .footer-background {
-                text-align: center;/*Align center*/
+                text-align: center;
                 color: rgb(255, 255, 255);
             }
             .footer-background img {
                 width: 20px; /* Adjust the size of the logo */
-                height: auto;/*Auto size*/
+                height: auto;
             }
 
             .footer-logo {
-                text-align: center;/*Align center*/
+                text-align: center;
             }
             .footer-links a {
                 color: rgb(255, 196, 0); /* Default link color */
@@ -293,7 +253,7 @@
                 margin-bottom: 5px;
             }
 
-            /******************************************SCROLL PROGRESS BAR***********************************************/
+            /***************************************SCROLL PROGRESS BAR***********************************************/
             #progress-bar {
                 position: fixed;
                 bottom: 0;
@@ -310,9 +270,10 @@
                 width: 0;
                 transition: width 0.3s;
             }
-            /***********************************************************************************************************/
+            /**************************************************************************************/
 
-           
+        
+
     </style>
     
 
@@ -320,13 +281,12 @@
 </head>
 
 <body>
- <div class="container">
     <header>
         <div class="top-section">
             <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
             <div class="details">
                 <h1>Jaime Banual Perez Jr.</h1>
-                <p>HOME PAGE</p>
+                <p>Flex Page</p>
             </div>
         </div>
         <nav>
@@ -336,6 +296,7 @@
                 </li>
                 <li class="Dropdown">
                     <span><a href="IT111 BLOG.html">IT111 Blog</a></span>
+                    
                 </li>
                 <li class="Dropdown">
                     <span><a href="FlexPage.htm">Flex Page</a></span>
@@ -346,7 +307,8 @@
             <video autoplay loop muted playsinline>
                 <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
             </video>
-        </div>    
+        </div>
+       
     </header>
     <div id="progress-bar">
         <div id="progress-bar-fill"></div>
@@ -359,65 +321,55 @@
             document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
         });
     </script>
-   
-    <div class="BODY_container">
+    <div class="main_content_container">
         <div class="selfintro_container">
             <ul>
                 <br><br><br>
-                    Self Introduction
+                    FLEX MY SELF
                     </br></br></br>
-                    <h3>Introduction</h3>
-                    Hello, I'm Jaime B. Perez Jr., and this webpage offers a glimpse into my
-                    interests and aspirations. Like many, I enjoy playing games, but I'm just an ordinary guy.
-                    My skills include playing the guitar and drawing, and my preferred sport is downhill 
-                    biking. I find happiness in pushing my physical limits and discovering things that can 
-                    truly awaken my self.</br></br>
+    
+                    In reflecting on my journey, I find joy in embracing both the highs and lows. While I </br>
+                    might not have academic medals or conventional achievements, I take pride in </br>
+                    performing well in the face of life's challenges. In a world that often values success in </br>
+                    school, I embrace the phrase "kapuy," signifying the struggles that have shaped my </br>
+                    unique path.</br></br></br>
 
-                    <h3>Hobbies and Passions</h3>
-                    Playing games is a common hobby for me, providing a source of 
-                    entertainment and relaxation. Additionally, I find joy in playing the guitar and expressing 
-                    my creativity through drawing and sketching. Downhill biking is my chosen sport, 
-                    offering an adrenaline rush and a connection with the outdoors.</br></br>
+                    <div class="Photosample_container">
+                        <img src="VIDEOS AND PICTURE/graduation.jpg">
+                    </div>
+                    One of my most significant victories is the unwavering belief of someone who sees</br> 
+                    potential in me. Their trust serves as a constant motivator, reminding me that success </br>
+                    goes beyond tangible rewards.</br></br></br>
                     
+                    <div class="Photosample_container">
+                        <img src="VIDEOS AND PICTURE/HTML.PNG">
+                    </div>
+                    Learning to code in HTML, CSS, and C is another highlight of my journey. It's not just</br> 
+                    about acquiring technical skills but about courageously exploring the dynamic world of </br>
+                    technology.	</br></br>
+
+                    My life isn't the best or the worst it's a mix of experiences that shape who I am. Each</br>
+                    day is a chance to showcase resilience and look forward to the exciting chapters ahead.</br></br>
+                </br>
+                    <div class="Photosample_container">
+                        <img src="VIDEOS AND PICTURE/BEST FRIEND.jpg">
+                    </div>
+                    Among my most cherished assets is a loyal friend who adds richness to my narrative. As</br> 
+                    I celebrate our bond, I hope it withstands the test of time.</br></br></br>
+
+
+                    <div class="Photosample_container">
+                        <img src="VIDEOS AND PICTURE/HHH.jpg">
+                    </div>
+                    In essence, I take pride in my life the ups, the downs, the lessons, and the connections.</br> 
+                    It's a celebration marked with a smile, a symbol of resilience, and an acknowledgment of </br>
+                    the unique journey that is mine. :)</br>
                     
-                    <h3>Pursuit of Knowledge</h3>
-                    I have a strong desire to expand my knowledge in various areas. 
-                    Specifically, I aim to delve deeper into networking, virtual trading, and hardware. These 
-                    pursuits reflect my commitment to continuous learning and personal growth.</br></br>
-
-                    <h3>Facing Challenges</h3>
-                    Life presents challenges, but I believe that each challenge also 
-                    provides an opportunity for growth. While challenges may seem insurmountable, there 
-                    is always a way forward. The key is not to seek an escape but to confront and overcome 
-                    challenges head-on. In times of difficulty, it's essential to remember that challenges are 
-                    trials meant to strengthen us, as emphasized in James 1:2-4 (NIV).</br></br>
-
-                    <h3>Conclusion</h3>
-                    Embracing challenges and pursuing knowledge are integral parts of my 
-                    journey. Through my hobbies, interests, and aspirations, I strive to not only find joy in 
-                    the present but also to develop as an individual. Life's challenges, though daunting, are 
-                    opportunities for growth, and by facing them with determination, we can emerge 
-                    stronger and more resilient.</br></br>
             </ul>
-       </div>
-       <div class="short-film_container">
-        <video class="Shortfilm"controls>
-            <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
-        </video>
-        <div class="social-media-links">
-            <a href="https://www.facebook.com/jaime.b.perez.jr" target="_blank" title="Facebook">
-                <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook">
-            </a>
-            <a href="https://youtube.com/@bikerjaimph8219?si=HuSmPYncYSuycjzb" target="_blank" title="YouTube">
-                <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube">
-            </a>
-            <a href="https://www.tiktok.com/@jaimeperezr1?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok">
-                <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
-            </a>
         </div>
-</div>
     </div>
-    <footer><!--FOOTERSECTION-->
+     
+    <footer>
         <div class="footer-credits footer-column">
             Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT
         </div>
@@ -446,9 +398,13 @@
                 <a href="https://www.flaticon.com/search?word=tiktok" target="_blank">
                     <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok Logo">
                     TikTok
-               </a>
-           </div>
+                </a>
+            </div>
         </div>
-    </footer><!--FooterEndSection-->
+    </footer>
+
+
 </body>
-</html> 
+
+
+</html>
