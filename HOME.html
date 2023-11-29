@@ -7,10 +7,15 @@
 
     <style>
        /**********************************************FOR HEADER*************************************************/
+       body {
+            margin: 0;
+            padding: 0;
+        }
+
        body, html {
             margin: 0;
-           padding: 0;
-           display: flex;
+            padding: 0;
+            display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
@@ -18,6 +23,7 @@
         
         header {
             background-color: rgba(19, 19, 19, 0.829); /* BACKGROUND HEADER COLOR */
+            width: 100%;
             height: 190px;/* SIZE FOR BACKGROUND HEADER*/
             color: rgba(255, 255, 255, 0.788); /* TEXT COLOR FOR THE MINUE BUTTONS */
             border-bottom: 2px solid rgba(19, 19, 19, 0.829); /* DIVISION LINE BELOW THE HEADR */
@@ -26,6 +32,7 @@
             /*(justify-content: space-between;)) /* Align content and navigation to the ends, but i guess this is not important*/
             align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
             padding: 20px;
+            overflow: hidden;
         }
             
         .top-section {
@@ -64,7 +71,8 @@
             padding: 10px 20px;
             display: inline-block;
         }
-
+        
+        
 
 
         /**********************************************DROPDOWN MENU*************************************************/
@@ -115,7 +123,6 @@
         }
 
 
-        /*****************************************************BODY**********************************************************/
 
 
 
@@ -124,14 +131,25 @@
       as my web backgound so that its have live bbackground*/
        .video-container {
          position: fixed;
-          top: -400px;
-            left: 0px;
-            width: 4000px;
-            height:auto;
-            overflow: hidden;
-            object-fit: cover;
-         z-index: -1;
+        top: -400px;
+        left: 0px;
+        width: 4000px;
+        height:auto;
+        overflow: hidden;
+        object-fit: cover;
+        z-index: -1;
         }
+
+        .video-container {
+        position: fixed;
+        top: -400px;
+        left: 0px;
+        width: 100%; /* Change this to 100% */
+        height: auto;
+        overflow: hidden;
+        object-fit: cover;
+        z-index: -1;
+    }   
         .Gold-container {
         position: fixed;
         top: 0;
@@ -153,49 +171,202 @@
         
 
 
-        /**********************************************FOOTER*************************************************/
-        /*this is for footer, but i made my footer inside the body content
-        cause the its more efficient to do some style when i made it inside the body content*/
-        .container {
-            flex: 1; /* Allow the content to grow and take up available space */
-        }
-
-        footer {
-            background-color: #ffffff7e;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 0px;
-            font-size: 11px;
-        }
+      
         
 
 
-        /**************************************************************************************/
        
-        .body_container {
-        text-align: center; /* Center the text within the container */
-        position: relative;
-        width: 50%; /* Set the width of the container */
-        margin: 10; /* Center the container horizontally */
-        color: #fff;
+       /*****************************************************BODY**********************************************************/
+       .main_content_container {
+        margin: 0;
+        padding: 0;
+        background-color: #00000033;
+        height: 2300px;
+        width: 1340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 1381px;
+        z-index: 1;
+        }
+
+       .selfintro_container{
+        font-family: "Arial", sans-serif ;
+        font-size: 13.5;
+        }
+        .selfintro_container {
+            text-align: center; /* Center the text within the container */
+            position: absolute;
+            left: 300px;
+            width: 50%; /* Set the width of the container */
+            margin: 10; /* Center the container horizontally */
+            top: 100px;
+            color: #fff;
+        }
+        .selfintro_container{
+            font-family: Arial, sans-serif;/*Set a fontstyle*/
+            text-align: justify; /* Set text alignment to justifyy */
+            line-height: 1.6; /* adjust line height for better readability */
+            margin: 20px;/*margin*/
+        }
+
+        .selfintro_container h3{
+            text-align: center;
         }
 
         .short-film_container {
-            width: 190%; /* Adjust the width of the film container as needed */
-            overflow: hidden;
-            margin-left: 0px;
-            position: relative;
-            left: 300px;
-            bottom: 500px;
+            position: inherit;
+            top: 1300px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            z-index: 1;/*Bring to front*/
         }
 
         .Shortfilm {
-            width: 50%;
-            height: auto;
+            width: 50%;/*Set the width of the video*/
+            height: auto;/*Automaticly set the heigth for better*/
         }
 
+
        
-        /**************************************************************************************/
+        /*******************************************SOCIALMEDIA*******************************************************/
+        .social-media-links {
+            position: inherit;
+            margin-top: 500px;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            z-index: 1;/*Bring to front*/
+        }
+
+        .social-media-links a {
+            margin-top: 40px;
+            margin-right: 50px;
+            z-index: 1;/*Bring to front*/
+        }
+
+        .social-media-icons img {
+            width: 40px; /* Adjust the size of the icons */
+            height: 40px;
+            z-index: 1;/*Bring to front*/
+        }
+
+
+     /**********************************************FOOTER*************************************************/
+            /*this is for footer, but i made my footer inside the body content
+            cause the its more efficient to do some style when i made it inside the body content*/
+            .container {
+                flex: 1; /* Allow the content to grow and take up available space */
+            }
+            
+            footer {
+                background-color: rgb(24, 24, 24);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 10px;
+                font-size: 13px;
+                font-family: "inherit", sans-serif;
+                position: absolute;
+                top: 2530px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .footer-column {
+                flex: 1;
+            }
+
+            .footer-logo img {
+                width: 20px; /* Adjust the size of the logo */
+                height: auto;/*Auto size*/
+            }
+
+            .footer-credits {
+                text-align: center;/*Align center*/
+            }
+
+            .footer-background {
+                text-align: center;/*Align center*/
+                color: rgb(255, 255, 255);
+            }
+            .footer-background img {
+                width: 20px; /* Adjust the size of the logo */
+                height: auto;/*Auto size*/
+            }
+
+            .footer-logo {
+                text-align: center;/*Align center*/
+            }
+            .footer-links a {
+                color: rgb(255, 196, 0); /* Default link color */
+                text-decoration: none;
+                margin-right: 20px;
+                margin-bottom: 5px;
+            }
+
+            /******************************************SCROLL PROGRESS BAR***********************************************/
+            #progress-bar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: #f2f2f2;
+                z-index: 5;
+            }
+            
+            #progress-bar-fill {
+                height: 100%;
+                background-color: rgba(194, 158, 42, 0.911);
+                width: 0;
+                transition: width 0.3s;
+            }
+            /***********************************************************************************************************/
+            @media screen and (max-width: 768px) {
+            .main_content_container {
+                width: 100%;
+                height: auto;
+            }
+            footer {
+            position: relative;
+            bottom: auto; /* Reset the position */
+            font-size: 9px;
+            }
+
+            .footer-column {
+                flex: none; /* Remove flex property for smaller screens */
+            }
+
+            .footer-links a {
+                display: block; /* Make links block-level for better spacing */
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 0; /* Adjust bottom margin */
+            }
+
+            .selfintro_container {
+            width: 80%; /* Adjust width for smaller screens */
+            left: 10px; /* Adjust left position for smaller screens */
+            font-size: 11px;
+            }
+
+            .short-film_container {
+                top: 1000px; /* Adjust top position for smaller screens */
+            }
+
+            .Shortfilm {
+                width: 80%; /* Adjust width for smaller screens */
+            }
+
+            .social-media-links {
+                margin-top: 200px; /* Adjust margin-top for smaller screens */
+            }
+            .social-media-icons img{
+                width: 10px;
+                height: 10px;
+            }
+            }
+           
     </style>
     
 
@@ -215,32 +386,13 @@
         <nav>
             <ul>
                 <li class="Dropdown">
-                    <span><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/HOME.html#">Home Page</a></span>
-                    
+                    <span><a href="index.html">Home Page</a></span>
                 </li>
                 <li class="Dropdown">
-                    <span><a href="#">About</a></span>
-                    <ul class="Dropdown-content">
-                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/IT111%20BLOG.html">IT11 Blog</a></li>
-                        <li><a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/FlexPage.htm">Flex Page</a></li>
-                    </ul>
+                    <span><a href="IT111 BLOG.html">IT111 Blog</a></span>
                 </li>
                 <li class="Dropdown">
-                    <span><a href="#">Contact</a></span>
-                    <ul class="Dropdown-content">
-                        <a href="https://www.facebook.com/your-facebook-page" target="_blank">
-                            <img src="VIDEOS AND PICTURE/facebook.png" alt="Facebook"> Facebook
-                        </a>
-                        <a href="https://youtube.com/@bikerjaimph8219?si=97KlkAszFOvVdcHK" target="_blank">
-                            <img src="VIDEOS AND PICTURE/youtube.png" alt="YouTube"> YouTube
-                        </a>
-                        <a href="https://www.instagram.com/your-instagram-page" target="_blank">
-                            <img src="VIDEOS AND PICTURE/instagram.png" alt="Instagram"> Instagram
-                        </a>
-                        <a href="file:///D:/HTML/HTML%20CSS/major%20requirements/OTHER%20TAB/More.html">
-                            <img src="VIDEOS AND PICTURE/more.png" alt="More"> More
-                        </a>
-                    </ul>
+                    <span><a href="FlexPage.htm">Flex Page</a></span>
                 </li>
             </ul>
         </nav>
@@ -248,54 +400,109 @@
             <video autoplay loop muted playsinline>
                 <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
             </video>
-        </div>
-       
+        </div>    
     </header>
+    <div id="progress-bar">
+        <div id="progress-bar-fill"></div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
+        });
+    </script>
    
-    <div class="body_container">
-        <ul>
-            <br><br><br>
-                Self Introduction
-                </br></br></br>
-                Hi! I'm Jaime B. Perez Jr. and this is my webpage,</br>
-                My Hobbies is playing games, just like a normal guy..</br>
-                my skills is playing guitar, drawing or sketching</br>
-                The sports that i want is downhill using bike</br>
-                I made my happines through thing that can hurt me physicaly</br>
-                discovering the things that can fully aweak my self,</br>
-                is the hardest thing that until now is undiscovered</br></br>
-                The things that i want:</br>
-                I want to expand my knowladge about networking</br>
-                I want to learn more things in terms of vertual trading</br>
-                I want to become more knowladgeable man in terms of hardware</br></br>
-                I will share somthing that un unnecessary, SKIPT FOR IT</br>
-                Sometimes in life there's always be a challenges but in</br>
-                every challenges there's also a way to get out with it</br>
-                But from the word "way" its singular, so the only way is</br>
-                one way, evertime you want to escape with that challenges</br>
-                you can't, it will make even worst, and you think that</br>
-                it is still a challenges,. but its not. cause the way</br>
-                is already in front of you, but you dont take an action!</br>
-                so now if you have challenges, go through. and dont make a way!</br>
-                GOD Said, all challenges is a trials for us to make us</br>
-                more stronger. James 1:2-4(NIV)</br></br>
-        </ul>
-            <div class="short-film_container">
-                <video class="Shortfilm"controls>
-                    <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
-                </video>
+    <div class="main_content_container">
+        <div class="selfintro_container">
+            <ul>
+                <h3>Self Introduction</h3>
+                </br></br>
+                <h3>Introduction</h3>
+                Hello, I'm Jaime B. Perez Jr., and this webpage offers a glimpse into my
+                interests and aspirations. Like many, I enjoy playing games, but I'm just an ordinary guy.
+                My skills include playing the guitar and drawing, and my preferred sport is downhill 
+                biking. I find happiness in pushing my physical limits and discovering things that can 
+                truly awaken my self.</br></br>
+
+                <h3>Hobbies and Passions</h3>
+                Playing games is a common hobby for me, providing a source of 
+                entertainment and relaxation. Additionally, I find joy in playing the guitar and expressing 
+                my creativity through drawing and sketching. Downhill biking is my chosen sport, 
+                offering an adrenaline rush and a connection with the outdoors.</br></br>
+                    
+                    
+                <h3>Pursuit of Knowledge</h3>
+                I have a strong desire to expand my knowledge in various areas. 
+                Specifically, I aim to delve deeper into networking, virtual trading, and hardware. These 
+                pursuits reflect my commitment to continuous learning and personal growth.</br></br>
+
+                <h3>Facing Challenges</h3>
+                Life presents challenges, but I believe that each challenge also 
+                provides an opportunity for growth. While challenges may seem insurmountable, there 
+                is always a way forward. The key is not to seek an escape but to confront and overcome 
+                challenges head-on. In times of difficulty, it's essential to remember that challenges are 
+                trials meant to strengthen us, as emphasized in James 1:2-4 (NIV).</br></br>
+
+                <h3>Conclusion</h3>
+                Embracing challenges and pursuing knowledge are integral parts of my 
+                journey. Through my hobbies, interests, and aspirations, I strive to not only find joy in 
+                the present but also to develop as an individual. Life's challenges, though daunting, are 
+                opportunities for growth, and by facing them with determination, we can emerge 
+                stronger and more resilient.</br></br>
+            </ul>
+       </div>
+       <div class="short-film_container">
+        <video class="Shortfilm"controls>
+            <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
+        </video>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/jaime.b.perez.jr" target="_blank" title="Facebook">
+                <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook">
+            </a>
+            <a href="https://youtube.com/@bikerjaimph8219?si=HuSmPYncYSuycjzb" target="_blank" title="YouTube">
+                <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube">
+            </a>
+            <a href="https://www.tiktok.com/@jaimeperezr1?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok">
+                <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
+            </a>
         </div>
-   </div>
-
-    <footer>
-        Wepage ni Jaime. v0.1.0.0 Here you can see what i have learned being 1st year student in BSIT
-    </footer>
-
-    <!--*************************************************************************************-->
-   
-    <!--*************************************************************************************-->
-
+    </div>
+    </div>
+    <footer><!--FOOTERSECTION-->
+        <div class="footer-credits footer-column">
+            Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT</br>
+            if you have concerned email me. thepersonaljaime@gmail.com</br></br>
+        </div>
+    </br>
+        <div class="footer-background footer-column">
+            Cridets to the Background video owner
+            <div class="footer-links">
+            <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
+                <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
+                Background Video
+            </div>
+            </a>
+        </div>
+    </br>
+        <div class="footer-logo footer-column">
+            Cridits to the Logo owner</br>
+            <div class="footer-links">
+                <a href="https://www.flaticon.com/free-icon/facebook_3670124?term=facebook&page=1&position=18&origin=search&related_id=3670124" target="_blank">
+                    <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook Logo">
+                    Facebook
+                </a>
+                <a href="https://www.flaticon.com/free-icon/youtube_3670209?term=youtube&page=1&position=17&origin=search&related_id=3670209" target="_blank">
+                    <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube Logo">
+                    YouTube
+                </a>
+                <a href="https://www.flaticon.com/search?word=tiktok" target="_blank">
+                    <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok Logo">
+                    TikTok
+               </a>
+           </div>
+        </div>
+    </footer><!--FooterEndSection-->
 </body>
-
-
-</html>
+</html> 
