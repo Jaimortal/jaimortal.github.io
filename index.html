@@ -72,21 +72,7 @@
             display: inline-block;
         }
         
-        @media screen and (max-width: 600px) {
-        header {
-            height: auto; /* Adjust header height for smaller screens */
-        }
-
-        .top-section {
-        flex-direction: column; /* Stack image and details vertically on smaller screens */
-        text-align: center;
-        }
-
-        img {
-        margin-right: 0; /* Remove margin for smaller screens */
-        margin-bottom: 10px; /* Add spacing between image and details */
-        }
-        }
+        
 
 
         /**********************************************DROPDOWN MENU*************************************************/
@@ -191,6 +177,20 @@
 
        
        /*****************************************************BODY**********************************************************/
+       .main_content_container {
+        margin: 0;
+        padding: 0;
+        background-color: #00000033;
+        height: 2300px;
+        width: 1340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 1381px;
+        z-index: 1;
+        }
+
        .selfintro_container{
         font-family: "Arial", sans-serif ;
         font-size: 13.5;
@@ -229,19 +229,6 @@
             height: auto;/*Automaticly set the heigth for better*/
         }
 
-        .main_content_container {
-        margin: 0;
-        padding: 0;
-        background-color: #00000033;
-        height: 2300px;
-        width: 1340px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 1381px;
-        z-index: 1;
-        }
 
        
         /*******************************************SOCIALMEDIA*******************************************************/
@@ -336,7 +323,49 @@
                 transition: width 0.3s;
             }
             /***********************************************************************************************************/
+            @media screen and (max-width: 768px) {
+            .main_content_container {
+                width: 100%;
+                height: auto;
+            }
+            footer {
+            position: relative;
+            bottom: auto; /* Reset the position */
+            font-size: 9px;
+            }
 
+            .footer-column {
+                flex: none; /* Remove flex property for smaller screens */
+            }
+
+            .footer-links a {
+                display: block; /* Make links block-level for better spacing */
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 0; /* Adjust bottom margin */
+            }
+
+            .selfintro_container {
+            width: 80%; /* Adjust width for smaller screens */
+            left: 10px; /* Adjust left position for smaller screens */
+            font-size: 11px;
+            }
+
+            .short-film_container {
+                top: 1000px; /* Adjust top position for smaller screens */
+            }
+
+            .Shortfilm {
+                width: 80%; /* Adjust width for smaller screens */
+            }
+
+            .social-media-links {
+                margin-top: 200px; /* Adjust margin-top for smaller screens */
+            }
+            .social-media-icons img{
+                width: 10px;
+                height: 10px;
+            }
+            }
            
     </style>
     
@@ -388,41 +417,40 @@
     <div class="main_content_container">
         <div class="selfintro_container">
             <ul>
-                <br><br><br>
-                    <h3>Self Introduction</h3>
-                    </br></br></br>
-                    <h3>Introduction</h3>
-                    Hello, I'm Jaime B. Perez Jr., and this webpage offers a glimpse into my
-                    interests and aspirations. Like many, I enjoy playing games, but I'm just an ordinary guy.
-                    My skills include playing the guitar and drawing, and my preferred sport is downhill 
-                    biking. I find happiness in pushing my physical limits and discovering things that can 
-                    truly awaken my self.</br></br>
+                <h3>Self Introduction</h3>
+                </br></br>
+                <h3>Introduction</h3>
+                Hello, I'm Jaime B. Perez Jr., and this webpage offers a glimpse into my
+                interests and aspirations. Like many, I enjoy playing games, but I'm just an ordinary guy.
+                My skills include playing the guitar and drawing, and my preferred sport is downhill 
+                biking. I find happiness in pushing my physical limits and discovering things that can 
+                truly awaken my self.</br></br>
 
-                    <h3>Hobbies and Passions</h3>
-                    Playing games is a common hobby for me, providing a source of 
-                    entertainment and relaxation. Additionally, I find joy in playing the guitar and expressing 
-                    my creativity through drawing and sketching. Downhill biking is my chosen sport, 
-                    offering an adrenaline rush and a connection with the outdoors.</br></br>
+                <h3>Hobbies and Passions</h3>
+                Playing games is a common hobby for me, providing a source of 
+                entertainment and relaxation. Additionally, I find joy in playing the guitar and expressing 
+                my creativity through drawing and sketching. Downhill biking is my chosen sport, 
+                offering an adrenaline rush and a connection with the outdoors.</br></br>
                     
                     
-                    <h3>Pursuit of Knowledge</h3>
-                    I have a strong desire to expand my knowledge in various areas. 
-                    Specifically, I aim to delve deeper into networking, virtual trading, and hardware. These 
-                    pursuits reflect my commitment to continuous learning and personal growth.</br></br>
+                <h3>Pursuit of Knowledge</h3>
+                I have a strong desire to expand my knowledge in various areas. 
+                Specifically, I aim to delve deeper into networking, virtual trading, and hardware. These 
+                pursuits reflect my commitment to continuous learning and personal growth.</br></br>
 
-                    <h3>Facing Challenges</h3>
-                    Life presents challenges, but I believe that each challenge also 
-                    provides an opportunity for growth. While challenges may seem insurmountable, there 
-                    is always a way forward. The key is not to seek an escape but to confront and overcome 
-                    challenges head-on. In times of difficulty, it's essential to remember that challenges are 
-                    trials meant to strengthen us, as emphasized in James 1:2-4 (NIV).</br></br>
+                <h3>Facing Challenges</h3>
+                Life presents challenges, but I believe that each challenge also 
+                provides an opportunity for growth. While challenges may seem insurmountable, there 
+                is always a way forward. The key is not to seek an escape but to confront and overcome 
+                challenges head-on. In times of difficulty, it's essential to remember that challenges are 
+                trials meant to strengthen us, as emphasized in James 1:2-4 (NIV).</br></br>
 
-                    <h3>Conclusion</h3>
-                    Embracing challenges and pursuing knowledge are integral parts of my 
-                    journey. Through my hobbies, interests, and aspirations, I strive to not only find joy in 
-                    the present but also to develop as an individual. Life's challenges, though daunting, are 
-                    opportunities for growth, and by facing them with determination, we can emerge 
-                    stronger and more resilient.</br></br>
+                <h3>Conclusion</h3>
+                Embracing challenges and pursuing knowledge are integral parts of my 
+                journey. Through my hobbies, interests, and aspirations, I strive to not only find joy in 
+                the present but also to develop as an individual. Life's challenges, though daunting, are 
+                opportunities for growth, and by facing them with determination, we can emerge 
+                stronger and more resilient.</br></br>
             </ul>
        </div>
        <div class="short-film_container">
