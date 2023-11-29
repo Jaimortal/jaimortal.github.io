@@ -72,6 +72,21 @@
                 display: inline-block;
             }
 
+            @media screen and (max-width: 600px) {
+            header {
+                height: auto; /* Adjust header height for smaller screens */
+            }
+
+            .top-section {
+            flex-direction: column; /* Stack image and details vertically on smaller screens */
+            text-align: center;
+            }
+
+            img {
+            margin-right: 0; /* Remove margin for smaller screens */
+            margin-bottom: 10px; /* Add spacing between image and details */
+            }
+            }
 
 
             /**********************************************DROPDOWN MENU*************************************************/
@@ -323,6 +338,22 @@
             text-align: justify; /* Set text alignment to justify */
             line-height: 1.6; /* Adjust line height for better readability */
             margin: 20px;
+            }
+
+            @media screen and (max-width: 600px) {
+            header {
+                height: auto; /* Adjust header height for smaller screens */
+            }
+
+            .top-section {
+                flex-direction: column; /* Stack image and details vertically on smaller screens */
+                text-align: center;
+            }
+
+            img {
+                margin-right: 0; /* Remove margin for smaller screens */
+                margin-bottom: 10px; /* Add spacing between image and details */
+            }
             }
 
         </style>

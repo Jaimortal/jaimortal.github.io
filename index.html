@@ -71,7 +71,22 @@
             padding: 10px 20px;
             display: inline-block;
         }
+        
+        @media screen and (max-width: 600px) {
+        header {
+            height: auto; /* Adjust header height for smaller screens */
+        }
 
+        .top-section {
+        flex-direction: column; /* Stack image and details vertically on smaller screens */
+        text-align: center;
+        }
+
+        img {
+        margin-right: 0; /* Remove margin for smaller screens */
+        margin-bottom: 10px; /* Add spacing between image and details */
+        }
+        }
 
 
         /**********************************************DROPDOWN MENU*************************************************/
@@ -130,14 +145,25 @@
       as my web backgound so that its have live bbackground*/
        .video-container {
          position: fixed;
-          top: -400px;
-            left: 0px;
-            width: 4000px;
-            height:auto;
-            overflow: hidden;
-            object-fit: cover;
-         z-index: -1;
+        top: -400px;
+        left: 0px;
+        width: 4000px;
+        height:auto;
+        overflow: hidden;
+        object-fit: cover;
+        z-index: -1;
         }
+
+        .video-container {
+        position: fixed;
+        top: -400px;
+        left: 0px;
+        width: 100%; /* Change this to 100% */
+        height: auto;
+        overflow: hidden;
+        object-fit: cover;
+        z-index: -1;
+    }   
         .Gold-container {
         position: fixed;
         top: 0;
@@ -171,7 +197,7 @@
         }
         .selfintro_container {
             text-align: center; /* Center the text within the container */
-            position: relative;
+            position: absolute;
             left: 300px;
             width: 50%; /* Set the width of the container */
             margin: 10; /* Center the container horizontally */
@@ -183,46 +209,45 @@
             text-align: justify; /* Set text alignment to justifyy */
             line-height: 1.6; /* adjust line height for better readability */
             margin: 20px;/*margin*/
-            }
+        }
+
+        .selfintro_container h3{
+            text-align: center;
+        }
 
         .short-film_container {
-            width: 190%; /* Adjust the width of the film container as needed */
-            overflow: hidden; /*hide the overflow*/
-            margin-left: 0px; /*Set Margin*/
-            position: relative;/*Set position to relative*/
-            top: 150px;
-            left: 100px;/*Clearance for left side*/
-            bottom: 0px;/*Clearance for bottom side*/
-            transform: translateX(3%);/*Tranxlatex*/
+            position: inherit;
+            top: 1300px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            z-index: 1;/*Bring to front*/
         }
 
         .Shortfilm {
-            width: 40%;/*Set the width of the video*/
+            width: 50%;/*Set the width of the video*/
             height: auto;/*Automaticly set the heigth for better*/
         }
 
-        .BODY_container {
-            justify-content: center;
-            margin: 0;/*reset margin to 0*/
-            padding: 0;/*reset padding to 0*/
-            background-color: #00000033;/*Set color for background*/
-            height: 2300px;/*Set height*/
-            width: 1340px;/*set width*/
-            position: absolute;/*Set Position absulot*/
-            top: 50%;/*Clreance for top*/
-            left: 50%;/*Clearance for left*/
-            transform: translate(-50%, -50%);
-            top: 1381px;
-            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
-            z-index: 1;
+        .main_content_container {
+        margin: 0;
+        padding: 0;
+        background-color: #00000033;
+        height: 2300px;
+        width: 1340px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 1381px;
+        z-index: 1;
         }
 
        
         /*******************************************SOCIALMEDIA*******************************************************/
         .social-media-links {
             position: inherit;
-            right: 700px;
-            margin-top: 20px;
+            margin-top: 500px;
             display: flex;
             justify-content: center; /* Center the content horizontally */
             z-index: 1;/*Bring to front*/
@@ -360,11 +385,11 @@
         });
     </script>
    
-    <div class="BODY_container">
+    <div class="main_content_container">
         <div class="selfintro_container">
             <ul>
                 <br><br><br>
-                    Self Introduction
+                    <h3>Self Introduction</h3>
                     </br></br></br>
                     <h3>Introduction</h3>
                     Hello, I'm Jaime B. Perez Jr., and this webpage offers a glimpse into my
@@ -415,11 +440,12 @@
                 <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
             </a>
         </div>
-</div>
+    </div>
     </div>
     <footer><!--FOOTERSECTION-->
         <div class="footer-credits footer-column">
-            Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT
+            Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT</br>
+            if you have concerned email me. thepersonaljaime@gmail.com</br></br>
         </div>
     </br>
         <div class="footer-background footer-column">
