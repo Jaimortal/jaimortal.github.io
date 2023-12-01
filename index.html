@@ -1,68 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" href="VIDEOS AND PICTURE/HHH.jpg">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>HOME</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
     <style>
-       /**********************************************FOR HEADER*************************************************/
-       body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-       body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+        }
+
+        /******************************************************Header******************************************************/
+        header {
+            background-color: rgba(255, 123, 0, 0.829);
+            width: 100%;
+            height: 190px;
+            color: rgba(255, 255, 255, 0.788);
+            border-bottom: 2px solid rgba(19, 19, 19, 0.829);
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-        }
-
-        
-        header {
-            background-color: rgba(19, 19, 19, 0.829); /* BACKGROUND HEADER COLOR */
-            width: 100%;
-            height: 190px;/* SIZE FOR BACKGROUND HEADER*/
-            color: rgba(255, 255, 255, 0.788); /* TEXT COLOR FOR THE MINUE BUTTONS */
-            border-bottom: 2px solid rgba(19, 19, 19, 0.829); /* DIVISION LINE BELOW THE HEADR */
-            display: flex;
-            flex-direction: column; /*DIRECTION FOR THE MENU BUTTON    its column so that the image is on top*/
-            /*(justify-content: space-between;)) /* Align content and navigation to the ends, but i guess this is not important*/
-            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
+            align-items: center;
             padding: 20px;
             overflow: hidden;
         }
-            
+
         .top-section {
-         display: flex;
-         align-items: center; /*for the elements on the top,. for alignment*/
-         /***(padding: 20px;)  this is optional, and mas better if its dont have padding */
+            display: flex;
+            align-items: center;
         }
 
         img {
-            max-width: 100px; /* Adjust the size of your image */
-            border-radius: 50%; /* Rounded image, adjust as needed */
-            margin-right: 20px; /* Spacing between the image and details */
+            max-width: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-top: 20px;
         }
 
         .details {
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
         }
 
-       /* STYL FOR NAVIGATION MENU */
         nav ul {
             list-style: none;
-            padding: 10px;
+            padding: 5px;
             margin: -10;
+            margin-left: 50px;
             background-color: #33333300;
-           
+            display: inline-flex; /* Add this line to make the list items align horizontally */
         }
 
         nav li {
-            display: inline;
+            display: inline-block;
             position: relative;
+            margin-right: 20px;
+            white-space: nowrap; /* Prevent line breaks within the navigation items */
         }
 
         nav a {
@@ -70,243 +70,141 @@
             color: #fff;
             padding: 10px 20px;
             display: inline-block;
-        }
-        
-        
-
-
-        /**********************************************DROPDOWN MENU*************************************************/
-        /* STYLE THE DROPDOWN CONTAINER */
-        .dropdown {
-            position: relative;
+            transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adding transition for smooth animation */
         }
 
-       /* STYLE DROPDOWN ITEMS */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: -45px;
-            background-color: #333333;
-            min-width: 160px;
-            padding: 10px;
-            z-index: 1;
+        nav a:hover {
+            color: #000000; /* Change the color on hover to your desired color */
+            text-shadow: 0 0 10px #caa500; /* Add glow effect on hover */
+            transform: scale(1.1);
         }
 
-        /* STYLE THE DROPDOWN ON HOVER */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        /*this is the first dropdown content css*/
-
-        /* Style the second dropdown container */
-        .Dropdown-container {
-            position: relative;
+        /* Header 2 Styles */
+        .TOPHeader_container {
+            background-color: #cf98007e;
+            color: white;
+            padding: 10px 0;
         }
 
-        .Dropdown-content {
-            display: none;
-            position: absolute;
-            left: -20px;
-            background-color: #0f0f0f;
-            min-width: 120px;
-            z-index: 1;
+        .stHeader_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
-        /* Style second dropdown items */
-        .Dropdown-content li {
-            padding: 10px;
-        }
-
-        /* Style the second dropdown on hover */
-        .Dropdown:hover .Dropdown-content {
-            display: block;
-        }
+        /******************************************************************************************************************/
 
 
-
-
-
-        /**********************************************BACKGROUND VIDEO*************************************************/
-      /*this is the style for background, but im using video
-      as my web backgound so that its have live bbackground*/
-       .video-container {
-         position: fixed;
-        top: -400px;
-        left: 0px;
-        width: 4000px;
-        height:auto;
-        overflow: hidden;
-        object-fit: cover;
-        z-index: -1;
-        }
-
-        .video-container {
-        position: fixed;
-        top: -400px;
-        left: 0px;
-        width: 100%; /* Change this to 100% */
-        height: auto;
-        overflow: hidden;
-        object-fit: cover;
-        z-index: -1;
-    }   
-        .Gold-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: -1; /* Place the video behind the content */
-        }
-        .Gold-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top; /* Center the video horizontally and align to the top */
-        position: absolute;
-        top: 0;
-        left: 0;
+        /*********************************************************BODY content*********************************************/
+        .main_content_container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: justify;
+            position: relative; /* Ensure the content appears above the video */
+            z-index: 1; /* Ensure content is on top of the video */
+            /* Your existing styles for .main_content_container */
         }
         
 
-
-      
-        
-
-
-       
-       /*****************************************************BODY**********************************************************/
-       .main_content_container {
-        margin: 0;
-        padding: 0;
-        background-color: #00000033;
-        height: 2300px;
-        width: 1340px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 1381px;
-        z-index: 1;
-        }
-
-       .selfintro_container{
-        font-family: "Arial", sans-serif ;
-        font-size: 13.5;
-        }
         .selfintro_container {
-            text-align: center; /* Center the text within the container */
-            position: absolute;
-            left: 300px;
-            width: 50%; /* Set the width of the container */
-            margin: 10; /* Center the container horizontally */
-            top: 100px;
-            color: #fff;
-        }
-        .selfintro_container{
-            font-family: Arial, sans-serif;/*Set a fontstyle*/
-            text-align: justify; /* Set text alignment to justifyy */
-            line-height: 1.6; /* adjust line height for better readability */
-            margin: 20px;/*margin*/
+            margin-bottom: 40px;
+            margin-left: 150px;
+            margin-right: 150px;
         }
 
-        .selfintro_container h3{
-            text-align: center;
+        .selfintro_container ul {
+            list-style: none;
+            padding: 0;
+            color: #f2f2f2;
+        }
+
+        .selfintro_container h3 {
+            color: rgb(255, 231, 124);
+            margin-top: 20px;
         }
 
         .short-film_container {
-            position: inherit;
-            top: 1300px;
-            margin-top: 100px;
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            z-index: 1;/*Bring to front*/
+            text-align: center;
         }
 
         .Shortfilm {
-            width: 50%;/*Set the width of the video*/
-            height: auto;/*Automaticly set the heigth for better*/
+            width: 100%;
+            max-width: 800px;
         }
 
-
-       
-        /*******************************************SOCIALMEDIA*******************************************************/
         .social-media-links {
-            position: inherit;
-            margin-top: 500px;
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            z-index: 1;/*Bring to front*/
+            margin-top: 20px;
         }
 
         .social-media-links a {
-            margin-top: 40px;
-            margin-right: 50px;
-            z-index: 1;/*Bring to front*/
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-media-links a:hover {
+            transform: scale(1.2); /* Scale the social media link on hover */
         }
 
-        .social-media-icons img {
-            width: 40px; /* Adjust the size of the icons */
-            height: 40px;
-            z-index: 1;/*Bring to front*/
+        .social-media-links img {
+            width: 60px;
+            height: 60px;
+        }
+        /****************************************************************************************************************/
+
+
+        /**********************************************************FOOTER************************************************/
+        footer {
+            background-color: #3d2d007e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
 
+        .footer-column {
+            margin-bottom: 20px;
+        }
 
-     /**********************************************FOOTER*************************************************/
-            /*this is for footer, but i made my footer inside the body content
-            cause the its more efficient to do some style when i made it inside the body content*/
-            .container {
-                flex: 1; /* Allow the content to grow and take up available space */
-            }
-            
-            footer {
-                background-color: rgb(24, 24, 24);
-                color: rgb(255, 255, 255);
-                text-align: center;
-                padding: 10px;
-                font-size: 13px;
-                font-family: "inherit", sans-serif;
-                position: absolute;
-                top: 2530px;
-                width: 100%;
-                z-index: 1;
-            }
+        .footer-links a {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adding transition for smooth color change and box-shadow */
+        }
 
-            .footer-column {
-                flex: 1;
-            }
+        .footer-links img {
+            width: 30px;
+            margin-right: 10px;
+        }
 
-            .footer-logo img {
-                width: 20px; /* Adjust the size of the logo */
-                height: auto;/*Auto size*/
-            }
+        /* Change color on hover */
+        .footer-links a:hover {
+            color: #caa500; /* Change the color on hover to your desired color */
+            text-shadow: 0 0 10px #caa500; /* Add glow effect on hover */
+            transform: scale(1.1);
+        }
+        /****************************************************************************************************************/
 
-            .footer-credits {
-                text-align: center;/*Align center*/
-            }
+        .Gold-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it to the background */
+        }
 
-            .footer-background {
-                text-align: center;/*Align center*/
-                color: rgb(255, 255, 255);
-            }
-            .footer-background img {
-                width: 20px; /* Adjust the size of the logo */
-                height: auto;/*Auto size*/
-            }
-
-            .footer-logo {
-                text-align: center;/*Align center*/
-            }
-            .footer-links a {
-                color: rgb(255, 196, 0); /* Default link color */
-                text-decoration: none;
-                margin-right: 20px;
-                margin-bottom: 5px;
-            }
-
-            /******************************************SCROLL PROGRESS BAR***********************************************/
-            #progress-bar {
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /******************************************SCROLL PROGRESS BAR**************************************************/
+        #progress-bar {
                 position: fixed;
                 bottom: 0;
                 left: 0;
@@ -322,99 +220,45 @@
                 width: 0;
                 transition: width 0.3s;
             }
-            /***********************************************************************************************************/
-            @media screen and (max-width: 768px) {
-            .main_content_container {
-                width: 100%;
-                height: auto;
-            }
-            footer {
-            position: relative;
-            bottom: auto; /* Reset the position */
-            font-size: 9px;
-            }
+        /****************************************************************************************************************/
 
-            .footer-column {
-                flex: none; /* Remove flex property for smaller screens */
-            }
-
-            .footer-links a {
-                display: block; /* Make links block-level for better spacing */
-                margin-right: 0; /* Remove right margin */
-                margin-bottom: 0; /* Adjust bottom margin */
-            }
-
-            .selfintro_container {
-            width: 80%; /* Adjust width for smaller screens */
-            left: 10px; /* Adjust left position for smaller screens */
-            font-size: 11px;
-            }
-
-            .short-film_container {
-                top: 1000px; /* Adjust top position for smaller screens */
-            }
-
-            .Shortfilm {
-                width: 80%; /* Adjust width for smaller screens */
-            }
-
-            .social-media-links {
-                margin-top: 200px; /* Adjust margin-top for smaller screens */
-            }
-            .social-media-icons img{
-                width: 10px;
-                height: 10px;
-            }
-            }
-           
+         
     </style>
-    
-
-
 </head>
-
+<div class="Gold-container">
+    <video autoplay loop muted playsinline>
+        <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
+    </video>
+</div>
 <body>
- <div class="container">
-    <header>
-        <div class="top-section">
-            <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
-            <div class="details">
-                <h1>Jaime Banual Perez Jr.</h1>
-                <p>HOME PAGE</p>
+    <!-- Combined Header -->
+    <header class="TOPHeader_container">
+        <div class="stHeader_container">
+            <!-- Header 1 Content -->
+            <div class="top-section">
+                <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
+                <div class="details">
+                    <h1>JAIME PEREZ JR.</h1>
+                    <p>HOME PAGE</p>
+                </div>
             </div>
+            <nav>
+                <ul>
+                    <li class="Dropdown">
+                        <span><a href="index.html">HOME PAGE</a></span>
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="IT111 BLOG.html">ITlll BLOG</a></span>
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="FlexPage.htm">Flex Page</a></span>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li class="Dropdown">
-                    <span><a href="index.html">Home Page</a></span>
-                </li>
-                <li class="Dropdown">
-                    <span><a href="IT111 BLOG.html">IT111 Blog</a></span>
-                </li>
-                <li class="Dropdown">
-                    <span><a href="FlexPage.htm">Flex Page</a></span>
-                </li>
-            </ul>
-        </nav>
-        <div class="Gold-container">
-            <video autoplay loop muted playsinline>
-                <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
-            </video>
-        </div>    
     </header>
-    <div id="progress-bar">
-        <div id="progress-bar-fill"></div>
-    </div>
-    <script>
-        window.addEventListener('scroll', function() {
-            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrollProgress = (scrollTop / scrollHeight) * 100;
-            document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
-        });
-    </script>
-   
     <div class="main_content_container">
+        <!-- Self Introduction -->
         <div class="selfintro_container">
             <ul>
                 <h3>Self Introduction</h3>
@@ -452,42 +296,43 @@
                 opportunities for growth, and by facing them with determination, we can emerge 
                 stronger and more resilient.</br></br>
             </ul>
-       </div>
-       <div class="short-film_container">
-        <video class="Shortfilm"controls>
-            <source src="VIDEOS AND PICTURE/short8years.mp4" type="Video/mp4">
-        </video>
-        <div class="social-media-links">
-            <a href="https://www.facebook.com/jaime.b.perez.jr" target="_blank" title="Facebook">
-                <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook">
-            </a>
-            <a href="https://youtube.com/@bikerjaimph8219?si=HuSmPYncYSuycjzb" target="_blank" title="YouTube">
-                <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube">
-            </a>
-            <a href="https://www.tiktok.com/@jaimeperezr1?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok">
-                <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
-            </a>
+        </div>
+        <div class="short-film_container">
+            <video class="Shortfilm" controls>
+                <source src="VIDEOS AND PICTURE/short8years.mp4" type="video/mp4">
+            </video>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/jaime.b.perez.jr" target="_blank" title="Facebook">
+                    <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook">
+                </a>
+                <a href="https://youtube.com/@bikerjaimph8219?si=HuSmPYncYSuycjzb" target="_blank" title="YouTube">
+                    <img src="VIDEOS AND PICTURE/YOUTUBEE.png" alt="YouTube">
+                </a>
+                <a href="https://www.tiktok.com/@jaimeperezr1?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok">
+                    <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok">
+                </a>
+            </div>
         </div>
     </div>
+    <div id="progress-bar">
+        <div id="progress-bar-fill"></div>
     </div>
     <footer><!--FOOTERSECTION-->
         <div class="footer-credits footer-column">
             Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT</br>
             if you have concerned email me. thepersonaljaime@gmail.com</br></br>
         </div>
-    </br>
         <div class="footer-background footer-column">
-            Cridets to the Background video owner
+            Credits to the Background video owner
             <div class="footer-links">
-            <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
-                <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
-                Background Video
+                <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
+                    <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
+                    Background Video
+                </a>
             </div>
-            </a>
         </div>
-    </br>
         <div class="footer-logo footer-column">
-            Cridits to the Logo owner</br>
+            Credits to the Logo owner</br>
             <div class="footer-links">
                 <a href="https://www.flaticon.com/free-icon/facebook_3670124?term=facebook&page=1&position=18&origin=search&related_id=3670124" target="_blank">
                     <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook Logo">
@@ -500,9 +345,21 @@
                 <a href="https://www.flaticon.com/search?word=tiktok" target="_blank">
                     <img src="VIDEOS AND PICTURE/TIKTOK.png" alt="TikTok Logo">
                     TikTok
-               </a>
-           </div>
+                </a>
+            </div>
         </div>
     </footer><!--FooterEndSection-->
+    <script>
+        // Example JavaScript function
+        function showMessage() {
+            alert("Hello from JavaScript!");
+        }
+        window.addEventListener('scroll', function() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
+        });
+    </script>
 </body>
-</html> 
+</html>

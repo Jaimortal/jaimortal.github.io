@@ -1,70 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" href="VIDEOS AND PICTURE/HHH.jpg">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Flex Page</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT111 BLOG</title>
     <style>
-       /**********************************************FOR HEADER*************************************************/
-       body {
-        margin: 0;
-        padding: 0;
-        }
-       
-       body, html {
-            margin: 0;
-           padding: 0;
-           display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        
-        header {
+        * {
             margin: 0;
             padding: 0;
-            background-color: rgba(19, 19, 19, 0.829); /* BACKGROUND HEADER COLOR */
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /******************************************************Header******************************************************/
+        header {
+            background-color: rgba(255, 123, 0, 0.829);
             width: 100%;
-            height: 190px;/* SIZE FOR BACKGROUND HEADER*/
-            color: rgba(255, 255, 255, 0.788); /* TEXT COLOR FOR THE MINUE BUTTONS */
-            border-bottom: 2px solid rgba(19, 19, 19, 0.829); /* DIVISION LINE BELOW THE HEADR */
+            height: 190px;
+            color: rgba(255, 255, 255, 0.788);
+            border-bottom: 2px solid rgba(19, 19, 19, 0.829);
             display: flex;
-            flex-direction: column; /*DIRECTION FOR THE MENU BUTTON    its column so that the image is on top*/
-            /*(justify-content: space-between;)) /* Align content and navigation to the ends, but i guess this is not important*/
-            align-items: center; /*ALIGNMENMENT FOR THE ELEMENTS*/
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
             overflow: hidden;
         }
-            
+
         .top-section {
-         display: flex;
-         align-items: center; /*for the elements on the top,. for alignment*/
-         /***(padding: 20px;)  this is optional, and mas better if its dont have padding */
+            display: flex;
+            align-items: center;
         }
 
-        .top-section img{
-            max-width: 100px; /* Adjust the size of your image */
-            border-radius: 50%; /* Rounded image, adjust as needed */
-            margin-right: 20px; /* Spacing between the image and details */
+        img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-top: 20px;
         }
 
         .details {
+            margin-top: 20px;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-       /* STYL FOR NAVIGATION MENU */
         nav ul {
             list-style: none;
-            padding: 10px;
+            padding: 5px;
             margin: -10;
+            margin-left: 50px;
             background-color: #33333300;
-           
+            display: inline-flex; /* Add this line to make the list items align horizontally */
         }
 
         nav li {
-            display: inline;
+            display: inline-block;
             position: relative;
+            margin-right: 20px;
+            white-space: nowrap; /* Prevent line breaks within the navigation items */
         }
 
         nav a {
@@ -72,189 +70,143 @@
             color: #fff;
             padding: 10px 20px;
             display: inline-block;
+            transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adding transition for smooth animation */
         }
 
-
-
-        /**********************************************DROPDOWN MENU*************************************************/
-        /* STYLE THE DROPDOWN CONTAINER */
-        .dropdown {
-            position: relative;
+        nav a:hover {
+            color: #000000; /* Change the color on hover to your desired color */
+            text-shadow: 0 0 10px #caa500; /* Add glow effect on hover */
+            transform: scale(1.1);
         }
 
-       /* STYLE DROPDOWN ITEMS */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: -45px;
-            background-color: #33333385;
-            min-width: 160px;
-            padding: 10px;
-            z-index: 1;
+        /* Header 2 Styles */
+        .TOPHeader_container {
+            background-color: #cf98007e;
+            color: white;
+            padding: 10px 0;
         }
 
-        /* STYLE THE DROPDOWN ON HOVER */
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .stHeader_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        /*this is the first dropdown content css*/
-
-        /* Style the second dropdown container */
-        .Dropdown-container {
-            position: relative;
-        }
-
-        .Dropdown-content {
-            display: none;
-            position: absolute;
-            left: -20px;
-            background-color: #33333385;
-            min-width: 120px;
-            z-index: 1;
-        }
-
-        /* Style second dropdown items */
-        .Dropdown-content li {
-            padding: 10px;
-        }
-
-        /* Style the second dropdown on hover */
-        .Dropdown:hover .Dropdown-content {
-            display: block;
-        }
+        /******************************************************************************************************************/
 
 
-
-        /**********************************************BACKGROUND VIDEO*************************************************/
-      /*this is the style for background, but im using video
-      as my web backgound so that its have live bbackground*/
-       .video-container {
-         position: fixed;
-          top: -400px;
-            left: 0px;
-            width: 4000px;
-            height:auto;
-            overflow: hidden;
-            object-fit: cover;
-         z-index: -1;
-         filter: blur(10px);
-        }
-
-        .Gold-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        z-index: -1; /* Place the video behind the content */
-        }
-        .Gold-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top; /* Center the video horizontally and align to the top */
-        position: absolute;
-        top: 0;
-        left: 0;
+        /*********************************************************BODY content*********************************************/
+        .main_content_container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: justify;
+            position: relative; /* Ensure the content appears above the video */
+            z-index: 1; /* Ensure content is on top of the video */
+            /* Your existing styles for .main_content_container */
         }
         
-        /**********************************************BODY CONTENT*************************************************/
-        .main_content_container {
-        margin: 0;
-        padding: 0;
-        background-color: #00000033;
-        height: 2300px;
-        width: 1340px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 1381px;
-        z-index: 1;
-        }
 
         .selfintro_container {
-        text-align: center; /* Center the text within the container */
-        position: relative;
-        top: 100px;
-        
-        color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-left: 150px;
+            margin-right: 150px;
         }
 
+        .selfintro_container ul {
+            list-style: none;
+            padding: 0;
+            color: #f2f2f2;
+        }
+
+        /*.selfintro_container h3 {
+            color: rgb(255, 231, 124);
+            margin-top: 20px;
+        }*/
+
         .Photosample_container {
-        display: block;
-        position: relative;
-        left: 30%;
-        border-radius: 8px; /* Add border-radius for rounded corners if desired */
-        overflow: hidden; /* Ensure that the border doesn't extend beyond the photo */
-        width: 500px; /* Set a fixed width for the box */
+            text-align: center; /* Center text */
+            margin-top: 0px; /* Adjust margin as needed */
         }
 
         .Photosample_container img {
-        width: 100%; /* Make the image fill the container */
-        height: auto; /* Maintain the aspect ratio */
-        display: block; /* Remove any default spacing or borders around the image */
+            max-width: 50%; /* Make the image responsive */
+            border-radius: 0%;
+        }
+        .CompEra_container{
+            text-align: center; /* Justify text alignment */
+            color: #f2f2f2;
+            margin-bottom: 40px;
+            line-height: 1.6; /* Adjust line height for better readability */
+        }
+        .HTMLessay_container {
+            text-align: justify; /* Justify text alignment */
+            color: #f2f2f2;
+            margin-bottom: 40px;
+            line-height: 1.6; /* Adjust line height for better readability */
         }
 
-        img.Photosample_image {
-        display: block;
+        .OutroStatement_container {
+            text-align: center; /* Center text */
+            color: #f2f2f2;
+            margin-bottom: 40px;
+        }
+        /****************************************************************************************************************/
+
+
+        /**********************************************************FOOTER************************************************/
+        footer {
+            background-color: #3d2d007e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
 
-        /**********************************************FOOTER*************************************************/
-            /*this is for footer, but i made my footer inside the body content
-            cause the its more efficient to do some style when i made it inside the body content*/
-            .container {
-                flex: 1; /* Allow the content to grow and take up available space */
-            }
-            
-            footer {
-                background-color: rgb(24, 24, 24);
-                color: rgb(255, 255, 255);
-                text-align: center;
-                padding: 10px;
-                font-size: 13px;
-                font-family: "inherit", sans-serif;
-                position: absolute;
-                top: 2530px;
-                width: 100%;
-                z-index: 1;
-            }
+        .footer-column {
+            margin-bottom: 20px;
+        }
 
-            .footer-column {
-                flex: 1;
-            }
+        .footer-links a {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adding transition for smooth color change and box-shadow */
+        }
 
-            .footer-logo img {
-                width: 20px; /* Adjust the size of the logo */
-                height: auto;
-            }
+        .footer-links img {
+            width: 30px;
+            margin-right: 10px;
+        }
 
-            .footer-credits {
-                text-align: center;
-            }
+        /* Change color on hover */
+        .footer-links a:hover {
+            color: #caa500; /* Change the color on hover to your desired color */
+            text-shadow: 0 0 10px #caa500; /* Add glow effect on hover */
+            transform: scale(1.1);
+        }
+        /****************************************************************************************************************/
 
-            .footer-background {
-                text-align: center;
-                color: rgb(255, 255, 255);
-            }
-            .footer-background img {
-                width: 20px; /* Adjust the size of the logo */
-                height: auto;
-            }
+        .Gold-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it to the background */
+        }
 
-            .footer-logo {
-                text-align: center;
-            }
-            .footer-links a {
-                color: rgb(255, 196, 0); /* Default link color */
-                text-decoration: none;
-                margin-right: 20px;
-                margin-bottom: 5px;
-            }
-
-            /***************************************SCROLL PROGRESS BAR***********************************************/
-            #progress-bar {
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /******************************************SCROLL PROGRESS BAR**************************************************/
+        #progress-bar {
                 position: fixed;
                 bottom: 0;
                 left: 0;
@@ -270,81 +222,49 @@
                 width: 0;
                 transition: width 0.3s;
             }
-            /**************************************************************************************/
+        /****************************************************************************************************************/
 
-
-            @media screen and (max-width: 600px) {
-            header {
-                height: auto; /* Adjust header height for smaller screens */
-            }
-
-            .top-section {
-                flex-direction: column; /* Stack image and details vertically on smaller screens */
-                text-align: center;
-            }
-
-            img {
-                margin-right: 0; /* Remove margin for smaller screens */
-                margin-bottom: 10px; /* Add spacing between image and details */
-            }
-            }   
-        
-
+         
     </style>
-    
-
-
 </head>
-
+<div class="Gold-container">
+    <video autoplay loop muted playsinline>
+        <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
+    </video>
+</div>
 <body>
-    <header>
-        <div class="top-section">
-            <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
-            <div class="details">
-                <h1>Jaime Banual Perez Jr.</h1>
-                <p>Flex Page</p>
+    <!-- Combined Header -->
+    <header class="TOPHeader_container">
+        <div class="stHeader_container">
+            <!-- Header 1 Content -->
+            <div class="top-section">
+                <img src="VIDEOS AND PICTURE/HHH.jpg" alt="HHH">
+                <div class="details">
+                    <h1>JAIME PEREZ JR.</h1>
+                    <p>IT111 BLOG</p>
+                </div>
             </div>
+            <nav>
+                <ul>
+                    <li class="Dropdown">
+                        <span><a href="index.html">HOME PAGE</a></span>
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="IT111 BLOG.html">ITlll BLOG</a></span>
+                    </li>
+                    <li class="Dropdown">
+                        <span><a href="FlexPage.htm">Flex Page</a></span>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li class="Dropdown">
-                    <span><a href="index.html">Home Page</a></span>
-                </li>
-                <li class="Dropdown">
-                    <span><a href="IT111 BLOG.html">IT111 Blog</a></span>
-                    
-                </li>
-                <li class="Dropdown">
-                    <span><a href="FlexPage.htm">Flex Page</a></span>
-                </li>
-            </ul>
-        </nav>
-        <div class="Gold-container">
-            <video autoplay loop muted playsinline>
-                <source src="VIDEOS AND PICTURE/GOLD.mp4" type="video/mp4">
-            </video>
-        </div>
-       
     </header>
-    <div id="progress-bar">
-        <div id="progress-bar-fill"></div>
-    </div>
-    <script>
-        window.addEventListener('scroll', function() {
-            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrollProgress = (scrollTop / scrollHeight) * 100;
-            document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
-        });
-    </script>
     <div class="main_content_container">
+        <!-- Self Introduction -->
         <div class="selfintro_container">
             <ul>
                 <br><br><br>
-                    FLEX MY SELF
-                    </br></br></br>
-    
-                    In reflecting on my journey, I find joy in embracing both the highs and lows. While I </br>
+                In reflecting on my journey, I find joy in embracing both the highs and lows. While I </br>
                     might not have academic medals or conventional achievements, I take pride in </br>
                     performing well in the face of life's challenges. In a world that often values success in </br>
                     school, I embrace the phrase "kapuy," signifying the struggles that have shaped my </br>
@@ -379,30 +299,30 @@
                     </div>
                     In essence, I take pride in my life the ups, the downs, the lessons, and the connections.</br> 
                     It's a celebration marked with a smile, a symbol of resilience, and an acknowledgment of </br>
-                    the unique journey that is mine. :)</br>
-                    
+                    the unique journey that is mine. :)</br></br></br></br>
+               </div>      
             </ul>
         </div>
     </div>
-     
-    <footer>
+    <div id="progress-bar">
+        <div id="progress-bar-fill"></div>
+    </div>
+    <footer><!--FOOTERSECTION-->
         <div class="footer-credits footer-column">
             Wepage ni Jaime. v0.1.0.0 Here you can see what I have learned being a 1st-year student in BSIT</br>
             if you have concerned email me. thepersonaljaime@gmail.com</br></br>
         </div>
-    </br>
         <div class="footer-background footer-column">
-            Cridets to the Background video owner
+            Credits to the Background video owner
             <div class="footer-links">
-            <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
-                <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
-                Background Video
+                <a href="https://youtu.be/PUyeOHIk0Vc?feature=shared" target="_blank">
+                    <img src="VIDEOS AND PICTURE/more.png" alt="Background Video">
+                    Background Video
+                </a>
             </div>
-            </a>
         </div>
-    </br>
         <div class="footer-logo footer-column">
-            Cridits to the Logo owner</br>
+            Credits to the Logo owner</br>
             <div class="footer-links">
                 <a href="https://www.flaticon.com/free-icon/facebook_3670124?term=facebook&page=1&position=18&origin=search&related_id=3670124" target="_blank">
                     <img src="VIDEOS AND PICTURE/FACEBOOKK.png" alt="Facebook Logo">
@@ -418,10 +338,18 @@
                 </a>
             </div>
         </div>
-    </footer>
-
-
+    </footer><!--FooterEndSection-->
+    <script>
+        // Example JavaScript function
+        function showMessage() {
+            alert("Hello from JavaScript!");
+        }
+        window.addEventListener('scroll', function() {
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progress-bar-fill').style.width = scrollProgress + '%';
+        });
+    </script>
 </body>
-
-
 </html>
